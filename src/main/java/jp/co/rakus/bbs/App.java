@@ -14,6 +14,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class App 
 {
+	//変更
+	//githubTes20170204
 	/**
 	 * メインメソッド
 	 */
