@@ -48,6 +48,7 @@ public class App {
    * Program entry point
    */
   public static void main(String[] args) {
+	System.out.println("★★");
     scenario(jenkins, 1);
     scenario(travis, 0);
   }
