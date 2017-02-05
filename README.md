@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!-- the line below needs to be an empty line C: (its because kramdown isnt
      that smart and dearly wants an empty line before a heading to be able to
      display it as such, e.g. website) -->
@@ -45,3 +46,6 @@ If you are willing to contribute to the project you will find the relevant infor
 # License
 
 This project is licensed under the terms of the MIT license.
+=======
+# kouenji
+>>>>>>> dab1394c04b4ae2cc20bfdc369176a6aa6b3ff39

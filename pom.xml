@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
     The MIT License
@@ -485,4 +486,90 @@
         </plugins>
     </reporting>
 
+=======
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>jp.co.rakus.bbs</groupId>
+  <artifactId>bbs</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0.0-SNAPSHOT</version>
+  <name>bbs</name>
+  <url>http://maven.apache.org</url>
+	<!-- ここからコピペして使う -->
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<!-- 1.3.3.RELEASEじゃ動かない -->
+		<version>1.2.3.RELEASE</version>
+	</parent>
+
+	<dependencies>
+
+		<!-- (1)jdbcドライバの取り込みが不要になる -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<!-- ※以下を記述することで、DIコンテナにNamedParameterJdbcTemplateオブジェクトが作られる -->
+			<artifactId>spring-boot-starter-jdbc</artifactId>
+		</dependency>
+		<!-- (2)postgresqlに接続するための設定 -->
+<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+	<dependency>
+	    <groupId>org.postgresql</groupId>
+	    <artifactId>postgresql</artifactId>
+	    <version>9.4.1211.jre7</version>
+	</dependency>
+
+
+		<!-- (3) -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+			    <dependency>
+	      <groupId>org.springframework.boot</groupId>
+	      <artifactId>spring-boot-starter-web</artifactId>
+	    </dependency>
+	    <!-- jspを使うためのdependency -->
+		<dependency>
+        	<groupId>org.apache.tomcat.embed</groupId>
+        	<artifactId>tomcat-embed-jasper</artifactId>
+        	<scope>provided</scope>
+		</dependency>	
+		<!-- jstlを使うためのdependency -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+		</dependency>
+		<!-- lombokの追加 -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.16.10</version>
+			<!-- ネットじゃなくて、インストールされているものを使う -->
+			<scope>provided</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/javax.el/javax.el-api -->
+		<dependency>
+		    <groupId>javax.el</groupId>
+		    <artifactId>javax.el-api</artifactId>
+		    <version>3.0.1-b04</version>
+		</dependency>
+		
+	</dependencies>
+	<!-- (4) -->
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+	<properties>
+		<!-- (5) -->
+		<java.version>1.8</java.version>
+	</properties>
+>>>>>>> dab1394c04b4ae2cc20bfdc369176a6aa6b3ff39
 </project>

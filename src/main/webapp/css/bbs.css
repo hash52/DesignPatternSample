@@ -1,0 +1,20 @@
+@CHARSET "UTF-8";
+
+.articleform{
+	margin-bottom:10px;
+}
+
+.articleandcomennts{
+	border:solid silver 1px;
+	padding:10px;
+}
+
+.comment {
+	margin:20px;
+}
+
+.errormessage{
+	font-weight:bold;
+	margin:10px;
+	color:red;
+}
